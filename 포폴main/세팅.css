@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.thin {
+  font-weight: 100;
+}
+.Light {
+  font-weight: 300;
+}
+.regular {
+  font-weight: 400;
+}
+.med {
+  font-weight: 500;
+}
+.semib {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+.extb {
+  font-weight: 800;
+}
+.black {
+  font-weight: 900;
+}
+.px70 {
+  font-size: 70px;
+}
+
+.px50 {
+  font-size: 50px;
+}
+
+.px40 {
+  font-size: 40px;
+}
+
+.px35 {
+  font-size: 35px;
+}
+
+.px30 {
+  font-size: 30px;
+}
+
+.px25 {
+  font-size: 25px;
+}
+
+.px20 {
+  font-size: 20px;
+}
+
+.px18 {
+  font-size: 18px;
+}
+
+.px15 {
+  font-size: 15px;
+}
