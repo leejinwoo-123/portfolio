@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LJW's PortFolio</title>
+    <link href="세팅.css" rel="stylesheet" type="text/css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            width: 100%;
+            margin: auto;
+            background-image: url(background.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        a:haver {
+            color: #feb43e;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        header {
+            width: 92.5%;
+            height: 137px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .about {
+            color: #FF9D00;
+            font-weight: bold;
+        }
+
+        header .px30.bold {
+            color: #FF9D00
+        }
+
+        header nav {
+            width: 40%;
+        }
+
+        header nav ul {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            padding: 0;
+        }
+
+        header nav ul li {
+            list-style: none;
+
+        }
+
+        header nav ul li a {
+            color: white;
+        }
+
+        section {
+            width: 92.5%;
+            height: 1024px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        p {
+            color: white;
+        }
+
+        .all {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 80%;
+        }
+
+        .px30.bold.color {
+            color: #FF9D00;
+        }
+
+        section .all .profile {
+            width: 29.73%;
+            background-image: url(profile.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+        }
+
+        section .all .infor>div>div:first-child {
+            width: 91px;
+            height: 91px;
+        }
+
+        section .all .infor>div {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        section .infor {
+            margin-left: 50px;
+        }
+
+        .all .infor_all {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .box {
+            display: none;
+            position: absolute;
+            width: 79.73%;
+            background-color: rgb(255, 156, 0, 85%);
+            border-radius: 30px;
+            padding: 7% 0px;
+            top: 21%;
+            left: 10.153%;
+        }
+
+        .box>div {
+            width: 736px;
+            margin: 0px auto;
+        }
+
+        .box>div>div {
+            display: flex;
+            align-items: center;
+
+
+        }
+
+        .box>div>div>div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box .px30.bold.italic {
+            color: white;
+            width: 8%;
+            margin-right: 100px;
+        }
+
+        .box .icon {
+            width: 114px;
+            height: 114px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            margin: 30px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            header {
+                width: 92.5%;
+                height: 90px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 auto;
+            }
+
+            header nav {
+                width: 45%;
+            }
+
+            header nav ul {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+
+            header .med.italic.px30 {
+
+                font-size: 25px;
+            }
+
+            .px30.bold {
+                font-size: 16px;
+            }
+
+            .all {
+                margin-top: 50px;
+            }
+
+            section .all .infor>div>div:first-child {
+                width: 49px;
+                height: 49px;
+                background-size: cover;
+            }
+
+            section {
+                height: 360px;
+            }
+
+            .box {
+                padding: 0;
+                top: 15%;
+            }
+
+            .box>div {
+                width: 520px;
+                margin: 0 auto;
+            }
+
+            .box .icon {
+                width: 60px;
+                height: 60px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+
+            }
+
+            .box .px30.bold.italic {
+                color: white;
+                width: 8%;
+                margin-right: 43px;
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .pc {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            header .mobile {
+                width: 18px;
+            }
+
+            section .infor {
+                margin-left: 20px;
+            }
+
+            section .all .profile {
+                width: 40%;
+                background-image: url(profile.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 100%;
+            }
+
+            .mobile a div {
+                width: 18px;
+                height: 16px;
+                background-image: url(menu.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            header {
+                height: 55px;
+            }
+
+            body {
+                background-image: none;
+                background-color: #0C1C25;
+            }
+
+            header .px30.bold.italic {
+                font-size: 12px;
+            }
+
+            .px30.bold {
+                font-size: 12px;
+            }
+
+            section .all .infor>div>div:first-child {
+                width: 30px;
+                height: 30px;
+                background-size: cover;
+            }
+
+            section {
+                height: 300px
+            }
+
+            .box2 {
+                width: 80%;
+                background-color: #FF9D00;
+                border-radius: 30px;
+                padding: 7% 0px;
+                margin: 0px auto;
+            }
+
+            .box2 .icon {
+                width: 31px;
+                height: 31px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                margin: 10px;
+            }
+
+            .box2>div>div {
+                display: flex;
+                align-items: center;
+
+
+            }
+
+            .box2>div {
+                width: 80%;
+                margin: 0px auto;
+            }
+
+            .box2>div>div>div {
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .box2 .px9.bold.italic {
+                color: white;
+                width: 8%;
+                margin-right: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="px30 bold italic">
+            LJW's PortFolio
+        </div>
+        <nav class="pc">
+            <ul>
+                <li><a href="Portfolio_main.html" class="med italic px30 ">MAIN</a></li>
+                <li><a href="#" class="med italic px30 about">ABOUT</a></li>
+                <li><a href="#" class="med italic px30 skill">SKILL</a></li>
+                <li><a href="project.html" class="med italic px30 ">PROJECT</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="mobile">
+            <a href="#">
+                <div></div>
+            </a>
+    </header>
+    <section>
+        <div class="all">
+            <div class="profile"></div>
+            <div class="infor_all">
+                <div class="infor">
+                    <div class="name">
+                        <div style="background-image: url(name.png);"></div>
+                        <div>
+                            <p class="px30 bold color">이름</p>
+                            <p class="px30 bold">이진우</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="infor">
+                    <div class="date">
+                        <div style="background-image: url(date.png);"></div>
+                        <div>
+                            <p class="px30 bold color">생년월일</p>
+                            <p class="px30 bold">00.01.06</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="infor">
+                    <div class="phone">
+                        <div style="background-image: url(phone.png);"></div>
+                        <div>
+                            <p class="px30 bold color">연락처</p>
+                            <p class="px30 bold">010-3057-0042</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="infor">
+                    <div class="email">
+                        <div style="background-image: url(email.png);"></div>
+                        <div>
+                            <p class="px30 bold color">이메일</p>
+                            <p class="px30 bold">jw379312@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="infor">
+                    <div class="edu">
+                        <div style="background-image: url(edu.png);"></div>
+                        <div>
+                            <p class="px30 bold color">학력</p>
+                            <p class="px30 bold">원광대학교 (경영학부)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="box pc">
+        <div>
+            <div>
+                <p class="px30 bold italic">Web</p>
+                <div>
+                    <div class="icon" style="background-image: url(html.png);"></div>
+                    <div class="icon" style="background-image: url(css.png);"></div>
+                    <div class="icon" style="background-image: url(js.png);"></div>
+                    <div class="icon" style="background-image: url(jq.png);"></div>
+                </div>
+            </div>
+            <div>
+                <p class="px30 bold italic">Design</p>
+                <div>
+                    <div class="icon" style="background-image: url(ps.png);"></div>
+                    <div class="icon" style="background-image: url(ai.png);"></div>
+                    <div class="icon" style="background-image: url(xd.png);"></div>
+                </div>
+            </div>
+            <div>
+                <p class="px30 bold italic">Video</p>
+                <div>
+                    <div class="icon" style="background-image: url(pr.png);"></div>
+                    <div class="icon" style="background-image: url(ae.png);"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let flag = false;
+        $(".skill").click(function () {
+            $(".box").toggle();
+            if (!flag) {
+                //스위치 on
+                $(".skill").css("color", "#FF9D00");
+                $(".skill").css("font-weight", "bold");
+                flag = true;
+            } else {
+                //스위치 off
+                $(".skill").css("color", "white");
+                $(".skill").css("font-weight", "normal");
+                flag = false;
+            }
+        });
+    </script>
+    <div class="box2 mobile">
+        <div>
+            <div>
+                <p class="px9 bold italic">Web</p>
+                <div>
+                    <div class="icon" style="background-image: url(html.png);"></div>
+                    <div class="icon" style="background-image: url(css.png);"></div>
+                    <div class="icon" style="background-image: url(js.png);"></div>
+                    <div class="icon" style="background-image: url(jq.png);"></div>
+                </div>
+            </div>
+            <div>
+                <p class="px9 bold italic">Design</p>
+                <div>
+                    <div class="icon" style="background-image: url(ps.png);"></div>
+                    <div class="icon" style="background-image: url(ai.png);"></div>
+                    <div class="icon" style="background-image: url(xd.png);"></div>
+                </div>
+            </div>
+            <div>
+                <p class="px9 bold italic">Video</p>
+                <div>
+                    <div class="icon" style="background-image: url(pr.png);"></div>
+                    <div class="icon" style="background-image: url(ae.png);"></div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
