@@ -1,0 +1,596 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-y: auto;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* Fullpage Sections */
+section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_logo {
+  font: normal normal bold 1.875rem;
+  color: #2e2e2e;
+}
+
+.header_nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.875rem;
+}
+
+.header_nav a {
+  text-decoration: none;
+  font: normal normal medium 1.875rem;
+  color: #2e2e2e;
+  transition: color 0.3s;
+}
+
+.header_nav a:hover {
+  color: #4a90e2;
+}
+
+/* Main Section */
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fa;
+  position: relative;
+}
+
+.main_container {
+  text-align: center;
+  padding: 0 1.875rem;
+}
+
+.main_text > h1 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3.125rem;
+  line-height: 1.4;
+  margin-bottom: 1.875rem;
+  color: #4a90e2;
+}
+.main_text h1 > .highlight {
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.125rem;
+  display: inline-block;
+}
+.main_text h1 > .ending {
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3.125rem;
+  display: inline;
+}
+.main_text_sub p {
+  font-size: 1.2rem;
+  color: #2e2e2e;
+  line-height: 1.6;
+}
+
+.scroll_down {
+  position: absolute;
+  bottom: 1.875rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  display: none;
+}
+
+main .scroll_down {
+  display: block;
+}
+
+.scroll_down_img {
+  width: 40px;
+  height: 70px;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-1.875rem);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* About Section */
+.about {
+  width: 100%;
+  height: 100vh;
+  background: #f4f4f4;
+  padding-top: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_container {
+  width: 75%;
+  height: 85vh;
+  max-height: 716px;
+  margin: 0 auto;
+  background-color: white;
+  color: #2e2e2e;
+  align-items: center;
+}
+
+.about_text {
+  width: 100%;
+}
+.about_text > h2 {
+  text-align: center;
+  padding: 0.9375rem 0 1.875rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2e2e2e;
+}
+.about_box {
+  display: flex;
+  gap: 1.875rem;
+  justify-content: center;
+}
+
+.about_box_img {
+  width: 32.98%;
+  max-width: 475px;
+  max-height: 420px;
+  border-radius: 10px;
+}
+.about_box_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.about_box_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about_box_text > div {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+}
+.about_box_text .text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 1.25rem;
+  margin-top: 3.125rem;
+}
+.skill_box_img {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+.skill_box_img img {
+  width: 59px;
+  height: 59px;
+}
+/* Project Section */
+.project {
+  height: auto;
+  overflow-y: auto;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* 내부 섹션 기본 스타일 (필요에 따라 조정) */
+.project section {
+  width: 75%;
+  height: auto;
+  max-height: 1080px;
+  margin: 5rem auto 0;
+}
+.web_design_container,
+.Design_container,
+.video_container {
+  width: 100%;
+  border-bottom: 3px solid #2e2e2e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.web_design_container h3,
+.Design_container h3,
+.video_container h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.slide {
+  width: 100%;
+  height: 70vh;
+  margin: 0 auto;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-top: 1.875rem;
+}
+
+.swiper-slide {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.slide_in {
+  width: 90%;
+  height: 100%;
+  max-height: 700px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide_in .slide_text .slide_text_title {
+  font-size: 1.875rem;
+  color: black;
+  font-weight: bold;
+  text-align: left;
+}
+
+.slide_in .slide_text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+.slide_in .slide_text .slide_text_content {
+  display: flex;
+  gap: 1.25rem;
+  flex-direction: column;
+}
+.slide_in .slide_text .slide_text_content p,
+.slide_in .slide_text .slide_text_content a {
+  font-size: 1.25rem;
+  color: black;
+  text-align: left;
+  font-weight: bold;
+  text-decoration: none;
+}
+.slide_img_in {
+  width: 200px;
+  height: 50px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+}
+.slide_img_in a {
+  color: black;
+  font-size: 1.25rem;
+}
+.slide_img_in img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  object-position: center;
+}
+.slide_in .grid {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.625rem;
+}
+.swiper-slide .slide_img {
+  width: 90%;
+  height: 80%;
+}
+
+/* object-position 애니메이션 정의 (이미 없다면 추가) */
+@keyframes shiftImageToBottom {
+  from {
+    object-position: top;
+  }
+  to {
+    object-position: bottom;
+  }
+}
+
+/* 기존 이미지 스타일 유지 */
+.swiper-slide .slide_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top; /* 기본 상태 */
+  /* transition 추가 시도 (호버 해제 시 부드럽게 돌아오도록) - object-position에는 잘 안될 수 있음 */
+  /* transition: object-position 0.5s ease-out; */
+}
+
+/* hover 시 애니메이션 적용 (기존 hover 규칙 수정) */
+.swiper-slide .slide_img img:hover {
+  /* object-position: bottom; 이 줄은 삭제 */
+  animation-name: shiftImageToBottom;
+  animation-duration: 2s; /* 지속 시간 2초 */
+  animation-timing-function: ease-in-out; /* 타이밍 함수 */
+  animation-fill-mode: forwards; /* 애니메이션 종료 후 상태 유지 */
+}
+
+.Design .hidden {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #2e2e2e;
+  border-radius: 30px;
+  top: 0%;
+  left: 0%;
+  z-index: 10;
+  align-content: center;
+}
+.logo_all_img {
+  width: 90%;
+  height: 85%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.625rem;
+  margin: 0 auto;
+  align-items: center;
+}
+.logo_all_img .logo_img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.logo_all_img .logo_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.leaflet_all_img {
+  width: 90%;
+  height: 85%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.625rem;
+  margin: 0 auto;
+  align-items: center;
+}
+.leaflet_all_img .leaflet_img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.leaflet_all_img .leaflet_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.poster_all_img {
+  width: 90%;
+  height: 85%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.625rem;
+  margin: 0 auto;
+  align-items: center;
+}
+.poster_all_img .poster_img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.poster_all_img .poster_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.banner_all_img {
+  width: 90%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  margin: 0 auto;
+}
+.banner_all_img .banner_img {
+  width: 100%;
+  height: 100%;
+}
+.banner_all_img .banner_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.x_circle {
+  width: 30px;
+  height: 30px;
+  background-image: url(x-circle.png);
+  background-size: cover;
+  position: absolute;
+  left: 48.6%;
+  bottom: 0.625rem;
+}
+.Design_box_container {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+}
+.logo_design_img,
+.leaflet_design_img,
+.poster_design_img,
+.banner_design_img {
+  max-width: 338px;
+  height: 385px;
+}
+.logo_design_img img,
+.leaflet_design_img img,
+.poster_design_img img,
+.banner_design_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.click_img {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #2e2e2e;
+  text-align: center;
+}
+.video {
+  width: 100%;
+  min-height: 80vh;
+  max-height: 1080px;
+  align-items: center;
+}
+.video_box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.875rem;
+  width: 100%;
+  height: 100%;
+  min-height: 80vh;
+  padding: 1.875rem 0;
+}
+
+.link_video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.link_video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* Navigation Dots */
+.nav-dots {
+  position: fixed;
+  right: 1.875rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0.625rem 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav-dot.active {
+  background: #007bff;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main_text h1 {
+    font-size: 2rem;
+  }
+
+  .about_box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about_box_text {
+    grid-template-columns: 1fr;
+  }
+
+  .header_nav ul {
+    gap: 0.9375rem;
+  }
+}
