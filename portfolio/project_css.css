@@ -33,7 +33,9 @@ header {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
+.mobile {
+  display: none;
+}
 .header_container {
   max-width: 1200px;
   margin: 0 auto;
@@ -105,7 +107,7 @@ main {
   display: inline;
 }
 .main_text_sub p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #2e2e2e;
   line-height: 1.6;
 }
@@ -163,6 +165,7 @@ main .scroll_down {
   background-color: white;
   color: #2e2e2e;
   align-items: center;
+  align-content: center;
 }
 
 .about_text {
@@ -260,7 +263,6 @@ main .scroll_down {
   font-size: 2rem;
   font-weight: 700;
 }
-
 .slide {
   width: 100%;
   height: 70vh;
@@ -310,7 +312,7 @@ main .scroll_down {
 }
 .slide_in .slide_text .slide_text_content p,
 .slide_in .slide_text .slide_text_content a {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: black;
   text-align: left;
   font-weight: bold;
@@ -322,13 +324,13 @@ main .scroll_down {
   background-color: #f4f4f4;
   border-radius: 10px;
   display: flex;
-  gap: 0.625rem;
+  gap: 0.375rem;
   align-items: center;
   justify-content: center;
 }
 .slide_img_in a {
   color: black;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .slide_img_in img {
   width: 30px;
@@ -340,7 +342,7 @@ main .scroll_down {
   display: grid;
   grid-template-columns: 2fr 2fr;
   grid-template-rows: 1fr 1fr;
-  gap: 0.625rem;
+  gap: 0.375rem;
 }
 .swiper-slide .slide_img {
   width: 90%;
@@ -486,15 +488,15 @@ main .scroll_down {
   background-size: cover;
   position: absolute;
   left: 48.6%;
-  bottom: 0.625rem;
+  bottom: 0.375rem;
 }
 .Design_box_container {
   width: 100%;
-  height: 70vh;
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.25rem;
+  gap: 0.75rem;
 }
 .logo_design_img,
 .leaflet_design_img,
@@ -513,7 +515,7 @@ main .scroll_down {
   object-position: center;
 }
 .click_img {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
   color: #2e2e2e;
   text-align: center;
@@ -528,11 +530,11 @@ main .scroll_down {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 1.875rem;
+  gap: 1.125rem;
   width: 100%;
   height: 100%;
   min-height: 80vh;
-  padding: 1.875rem 0;
+  padding: 1.125rem 0;
 }
 
 .link_video {
@@ -572,6 +574,7 @@ main .scroll_down {
 
 /* Smooth Scroll */
 html {
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -591,6 +594,365 @@ html {
   }
 
   .header_nav ul {
-    gap: 0.9375rem;
+    gap: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* Header */
+  .header_container {
+    padding: 1.125rem; /* 1.875rem * 0.6 */
+  }
+  .header_logo {
+    font-size: 1.125rem;
+  }
+  .header_nav ul {
+    gap: 1.125rem;
+  }
+  .header_nav a {
+    font-size: 1rem;
+  }
+
+  /* Main Section */
+  .main_container {
+    padding: 0 1.125rem;
+  }
+  .main_text > h1 {
+    font-size: 1.875rem; /* 기준 값 */
+    margin-bottom: 1.125rem;
+  }
+  .main_text h1 > .highlight {
+    font-size: 1.875rem; /* 기준 값 */
+  }
+  .main_text h1 > .ending {
+    font-size: 1.5rem;
+  }
+  .main_text_sub p {
+    font-size: 1rem;
+  }
+  .scroll_down {
+    bottom: 1.125rem;
+  }
+  .slide_in {
+    width: 85%;
+  }
+  @keyframes bounce {
+    40% {
+      transform: translateY(-1.125rem);
+    }
+  }
+  .skill_box_img img {
+    width: 35px;
+    height: 35px;
+  }
+  /* About Section */
+  .about {
+    padding-top: 1.125rem;
+  }
+  .about_text > h2 {
+    padding: 0.5625rem 0 1.125rem 0; /* 0.9375rem * 0.6 ... */
+    font-size: 1.2rem; /* 2rem * 0.6 */
+  }
+  .about_box {
+    gap: 1.125rem;
+  }
+  .about_box_text > div {
+    gap: 0.375rem; /* 0.625rem * 0.6 */
+  }
+  .skill {
+    gap: 0.75rem; /* 1.25rem * 0.6 */
+    margin-top: 1.875rem; /* 3.125rem * 0.6 */
+  }
+  .skill_box_img {
+    gap: 0.75rem;
+  }
+
+  /* Project Section */
+  .project section {
+    margin: 3rem auto 0; /* 5rem * 0.6 */
+  }
+  .web_design_container h3,
+  .Design_container h3,
+  .video_container h3 {
+    font-size: 1.2rem; /* 2rem * 0.6 */
+  }
+  .swiper {
+    margin-top: 1.125rem;
+  }
+  .slide_in .slide_text .slide_text_title {
+    font-size: 1.125rem;
+  }
+  .slide_in .slide_text {
+    gap: 0.75rem;
+  }
+  .slide_in .slide_text .slide_text_content {
+    gap: 0.75rem;
+  }
+  .slide_in .slide_text .slide_text_content p,
+  .slide_in .slide_text .slide_text_content a {
+    font-size: 1rem;
+  }
+  .slide_img_in {
+    gap: 0.375rem;
+  }
+  .slide_img_in a {
+    font-size: 1rem;
+  }
+  .slide_in .grid {
+    gap: 0.375rem;
+  }
+  .logo_all_img,
+  .leaflet_all_img,
+  .poster_all_img,
+  .banner_all_img {
+    gap: 0.375rem;
+  }
+  .x_circle {
+    bottom: 0.375rem;
+  }
+  .Design_box_container {
+    gap: 0.75rem;
+  }
+  .click_img {
+    font-size: 1rem;
+  }
+  .video_box {
+    gap: 1.125rem;
+    padding: 1.125rem 0;
+  }
+
+  /* Navigation Dots */
+  .nav-dots {
+    right: 1.125rem;
+  }
+  .nav-dot {
+    margin: 0.375rem 0;
+  }
+  .Design_box_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.625rem;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .Design_box_container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .video_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.875rem;
+    width: 100%;
+    height: 100%;
+  }
+  .link_video iframe {
+    min-height: 40vh;
+  }
+  .project section {
+    max-height: none;
+  }
+  .video_box {
+    max-height: none;
+  }
+  .slide_in .grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.625rem;
+  }
+  .slide_in .grid .slide_img {
+    width: 100%;
+  }
+  .logo_design_img img,
+  .leaflet_design_img img,
+  .poster_design_img img,
+  .banner_design_img img {
+    width: 112%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* Header */
+  .header_container {
+    padding: 0.75rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .header_logo {
+    font-size: 1rem;
+  }
+  .header_nav ul {
+    gap: 0.75rem;
+  }
+  .header_nav a {
+    font-size: 0.875rem;
+  }
+
+  /* Main Section */
+  .main_text > h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .main_text h1 > .highlight,
+  .main_text h1 > .ending {
+    font-size: 1.5rem;
+  }
+  .main_text_sub p {
+    font-size: 1rem;
+  }
+
+  /* About Section */
+  .about_container {
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+  }
+  .about_text > h2 {
+    font-size: 1.5rem;
+  }
+  .about_box_img {
+    width: 80%;
+    max-width: 300px;
+  }
+  .skill_box_img {
+    flex-wrap: wrap;
+  }
+  .skill_box_img img {
+    width: 40px;
+    height: 40px;
+  }
+  .about_box_text .text h3 {
+    font-size: 1rem;
+  }
+  .about_box_text .text p {
+    font-size: 1rem;
+  }
+
+  /* Project Section */
+  .project section {
+    width: 90%;
+    margin: 2rem auto 0;
+  }
+  .web_design_container h3,
+  .Design_container h3,
+  .video_container h3 {
+    font-size: 1.5rem;
+  }
+  .slide_in {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .slide_in .slide_text .slide_text_title {
+    font-size: 1.25rem;
+  }
+  .slide_in .slide_text .slide_text_content p,
+  .slide_in .slide_text .slide_text_content a {
+    font-size: 1rem;
+  }
+  .slide_in .grid {
+    grid-template-columns: 1fr;
+    gap: 0.375rem;
+  }
+  .swiper-slide .slide_img {
+    width: 100%;
+    height: 50%;
+  }
+
+  /* Design Section */
+  .Design_box_container {
+    grid-template-columns: 1fr;
+  }
+  .logo_all_img,
+  .leaflet_all_img {
+    grid-template-columns: 1fr;
+  }
+  .poster_all_img {
+    grid-template-columns: 1fr 1fr;
+  }
+  .banner_all_img {
+    flex-direction: column;
+  }
+  .x_circle {
+    left: 45%;
+  }
+
+  /* Video Section */
+  .video_box {
+    grid-template-columns: 1fr;
+  }
+  .link_video iframe {
+    height: 25vh;
+    min-height: 200px;
+  }
+
+  /* Nav Dots */
+  .nav-dots {
+    display: none;
+  }
+  .scroll_down {
+    animation: none;
+  }
+  .header_container {
+    display: none;
+  }
+  .about_box_img {
+    max-height: 300px;
+  }
+  .about_box_img img {
+    max-height: 300px;
+  }
+  .name_icon img,
+  .date_icon img,
+  .phone_icon img,
+  .email_icon img,
+  .education_icon img {
+    width: 50px;
+    height: 50px;
+  }
+  .about_box_text .text h3 {
+    font-size: 1rem;
+  }
+  .skill {
+    display: none;
+  }
+  .logo_design_img img,
+  .leaflet_design_img img,
+  .poster_design_img img,
+  .banner_design_img img {
+    width: 128%;
+  }
+  .pc {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .mobile .slide_in .slide_text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.375rem;
+  }
+  .slide_flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .link_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
   }
 }
