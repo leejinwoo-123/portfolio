@@ -492,7 +492,8 @@ main .scroll_down {
 }
 .Design_box_container {
   width: 100%;
-  height: auto;
+  height: 70vh;
+  max-height: 700px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -534,7 +535,7 @@ main .scroll_down {
   width: 100%;
   height: 100%;
   min-height: 80vh;
-  padding: 1.125rem 0;
+  padding: 3.125rem 0;
 }
 
 .link_video {
